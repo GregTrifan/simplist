@@ -1,4 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-
-createApp(App).mount('#app')
+import PhosphorVue from "phosphor-vue";
+const app = createApp(App);
+app.use(PhosphorVue);
+app.mount("#app");
