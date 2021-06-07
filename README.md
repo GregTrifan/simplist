@@ -1,1 +1,3 @@
-# Simplist Dashboard Template in Vue + TailwindCSS
+# Simplist Dashboard Template
+
+## Built with Vue + TailwindCSS
