@@ -1,5 +1,5 @@
 <template>
-  <View msg="Hello Vue 3 + TypeScript + Vite" />
+  <View />
 </template>
 
 <script lang="ts">
