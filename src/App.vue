@@ -10,8 +10,7 @@ import View from './components/View.vue'
 export default defineComponent({
   name: 'App',
   components: {
-    View
-  }
+    View,
+  },
 })
 </script>
-
