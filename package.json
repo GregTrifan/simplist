@@ -10,7 +10,8 @@
     "kutty": "^0.5.1",
     "phosphor-vue": "^4.2.1",
     "vue": "^3.0.5",
-    "vue-awesome": "^4.3.1"
+    "vue-awesome": "^4.3.1",
+    "vue3-click-away": "^1.2.1"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^4.26.1",
