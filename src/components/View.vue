@@ -1,5 +1,5 @@
 <template>
-  <div class="dark:bg-dark" :class="{ dark: theme }">
+  <div class="dark:bg-black" :class="{ dark: theme }">
     <div
       class="
         flex
@@ -16,8 +16,9 @@
         class="
           block
           btn btn-light-secondary
-          dark:bg-blue-600 dark:text-gray-200
-          hover:bg-blue-100
+          dark:bg-gray-900 dark:text-gray-200
+          hover:bg-gray-200
+          dark:hover:bg-gray-700
           md:hidden
         "
       >

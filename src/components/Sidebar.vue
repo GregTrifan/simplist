@@ -30,16 +30,28 @@
     "
     :class="{ '-translate-x-full': !open, 'translate-x-0': open }"
   >
-    <div>
-      <h3 class="w-auto h-6 text-6xl font-bold text-white ml-2 mb-3">Logo</h3>
+    <div class="text-center">
+      <h3 class="h-6 text-6xl font-bold text-gray-200 mb-3">Logo</h3>
     </div>
     <nav
       class="text-sm mt-10 font-medium p-2 text-gray-500"
       aria-label="Main Navigation"
     >
-      <button class="btn w-full btn-primary mt-3" @click="toggleTheme">
-        {{ theme ? 'Turn Light mode' : 'Toggle Dark Mode' }}
-      </button>
+      <div class="text-center mt-3">
+        <button class="btn btn-primary mr-1" @click="toggleTheme">
+          <ph-moon-stars :size="24" v-if="!theme" />
+          <ph-sun :size="24" v-cloak v-else />
+        </button>
+        <a class="btn btn-primary" href="https://github.com/TheSlayer-666">
+          <ph-github-logo :size="24" />
+        </a>
+        <a
+          class="btn btn-primary ml-1"
+          href="https://www.linkedin.com/in/grigore-trifan-666biyz/"
+        >
+          <ph-linkedin-logo :size="24" />
+        </a>
+      </div>
     </nav>
   </nav>
 </template>
