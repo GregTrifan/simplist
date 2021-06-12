@@ -30,14 +30,92 @@
     "
     :class="{ '-translate-x-full': !open, 'translate-x-0': open }"
   >
-    <div class="text-center">
-      <h3 class="h-6 text-6xl font-bold text-gray-200 mb-3">Logo</h3>
+    <div class="text-center ">
+      <h3 class="h-6 text-6xl font-bold text-gray-200 mb-6">Logo</h3>
     </div>
     <nav
-      class="text-sm mt-10 font-medium p-2 text-gray-500"
+      class="text-sm mt-16 font-medium text-gray-500"
       aria-label="Main Navigation"
     >
-      <div class="text-center mt-3">
+    <a
+      class="
+        flex
+        items-center
+        px-4
+        py-3
+        transition
+        cursor-pointer
+        group
+        hover:bg-gray-800 hover:text-gray-200
+      "
+      :class="{'text-gray-200 bg-gray-800':true}"
+      href="#"
+    >
+      <ph-gauge class="
+          flex-shrink-0
+          w-5
+          h-5
+          mr-2
+          transition
+          group-hover:text-gray-300
+        "
+        
+        :size="48" />
+      <span>Dashboard</span>
+    </a>
+    <a
+      class="
+        flex
+        items-center
+        px-4
+        py-3
+        transition
+        cursor-pointer
+        group
+        hover:bg-gray-800 hover:text-gray-200
+      "
+      
+      href="#"
+    >
+      <ph-check class="
+          flex-shrink-0
+          w-5
+          h-5
+          mr-2
+          transition
+          group-hover:text-gray-300
+        "
+        
+        :size="48" />
+      <span>Tasks</span>
+    </a>
+    <a
+      class="
+        flex
+        items-center
+        px-4
+        py-3
+        transition
+        cursor-pointer
+        group
+        hover:bg-gray-800 hover:text-gray-200
+      "
+      
+      href="#"
+    >
+      <ph-gear-six class="
+          flex-shrink-0
+          w-5
+          h-5
+          mr-2
+          transition
+          group-hover:text-gray-300
+        "
+        
+        :size="48" />
+      <span>Settings</span>
+    </a>
+      <div class="text-center mt-3 ">
         <button class="btn btn-primary mr-1" @click="toggleTheme">
           <ph-moon-stars :size="24" v-if="!theme" />
           <ph-sun :size="24" v-cloak v-else />

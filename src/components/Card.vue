@@ -5,7 +5,7 @@
       p-4
       rounded-lg
       bg-white
-      border border-gray-100
+      border border-gray-1=200
       dark:bg-gray-900 dark:text-gray-50 dark:border-gray-800
     "
   >
