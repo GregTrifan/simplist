@@ -63,7 +63,14 @@
             /></Card>
             <Card title="Uptime" val="1d 4h"><ph-clock :size="32" /></Card>
           </div>
+          <div
+            class="
+              grid grid-cols-1 gap-4 xl:grid-cols-2
+            "
+          >
           <revenues/>
+          <devices/>
+          </div>
         </div>
       </div>
     </section>
@@ -74,6 +81,7 @@
 import { ref, defineComponent } from 'vue'
 import { store } from '../store'
 import Card from './Card.vue'
+import devices from "./charts/Devices.vue";
 import revenues from "./charts/Revenues.vue";
 import Sidebar from './Sidebar.vue'
 export default defineComponent({
@@ -90,6 +98,7 @@ export default defineComponent({
   },
   components: {
     Card,
+    devices,
     revenues,
     Sidebar,
   },

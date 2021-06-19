@@ -2,7 +2,14 @@
   <div id="chart" class="rounded-md
    bg-gray-800 shadow-lg dark:bg-gray-900
     dark:border-gray-800  border border-gray-1=200
+    text-white
     ">
+    <div class="flex flex-col m-3">
+          <div class="text-xs uppercase font-light text-gray-300">
+                  Transactions
+            </div>
+            <div class="text-xl font-bold ">Last 6 hours</div>
+        </div>
     <apexchart
       type="area"
       height="350"
