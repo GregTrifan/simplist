@@ -1,11 +1,11 @@
 <template>
   <div id="chart" class="rounded-md
-   bg-gray-800 shadow-lg dark:bg-gray-900
+   bg-white shadow-lg dark:bg-gray-900
     dark:border-gray-800  border border-gray-1=200
-    text-white
+    text-black dark:text-white
     ">
     <div class="flex flex-col m-3">
-          <div class="text-xs uppercase font-light text-gray-300">
+          <div class="text-xs uppercase font-light text-gray-800 dark:text-gray-300">
                   Transactions
             </div>
             <div class="text-xl font-bold ">Last 6 hours</div>
@@ -13,13 +13,14 @@
     <apexchart
       type="area"
       height="350"
-      :options="chartOptions"
+      :options="theme?darkOptions:chartOptions"
       :series="series"
     ></apexchart>
   </div>
 </template>
 <script lang="ts">
   import { ref, defineComponent } from 'vue'
+  import { store } from '../../store'
   export default defineComponent({
     name: 'revenues',
     components: {},
@@ -44,9 +45,8 @@
             enabled: false,
           },
           theme: {
-              mode: "dark",
+              mode:"light",
               palette:"palette1",
-
           },
           stroke: {
             curve: 'smooth',
@@ -69,7 +69,21 @@
             },
           },
         },
+        darkOptions: {
+          ...this.chartOptions,
+          theme: {
+              mode: "dark",
+              palette:"palette1",
+
+          },
+          
+        },
       }
     },
+    computed: {
+    theme() {
+      return store.state.theme
+    },
+  },
   })
 </script>
